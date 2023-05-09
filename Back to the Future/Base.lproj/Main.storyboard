@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V6u-F0-bsv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="nSe-8m-gpE">
+            <objects>
+                <viewController id="cqh-KR-fwu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tFJ-VY-CsO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="StR-4f-mM2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="QVh-kV-qPt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0r-LX-SPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="110"/>
+        </scene>
+        <!--Time-->
+        <scene sceneID="98q-76-lJx">
+            <objects>
+                <viewController id="crr-6P-sDJ" customClass="FirstViewController" customModule="Back_to_the_Future" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krI-59-nVq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ox9-wM-8hS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbW-cL-U0w">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Where am I?" id="jsF-xY-zOb">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="evB-Ap-r20">
+                                            <imageReference key="image" image="location" catalog="system" symbolScale="large"/>
+                                            <connections>
+                                                <action selector="selfLocationTapped:" destination="crr-6P-sDJ" id="gfy-ug-5Jy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="uZx-vD-DWE">
+                                            <connections>
+                                                <action selector="addButtonTapped:" destination="crr-6P-sDJ" id="iXq-uT-f04"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wlw-79-7C9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ox9-wM-8hS" firstAttribute="leading" secondItem="Wlw-79-7C9" secondAttribute="leading" id="6sq-eT-Svn"/>
+                            <constraint firstItem="Wlw-79-7C9" firstAttribute="trailing" secondItem="fbW-cL-U0w" secondAttribute="trailing" id="I5p-qV-Otb"/>
+                            <constraint firstItem="Wlw-79-7C9" firstAttribute="trailing" secondItem="Ox9-wM-8hS" secondAttribute="trailing" id="L3z-KS-4GU"/>
+                            <constraint firstItem="Ox9-wM-8hS" firstAttribute="top" secondItem="fbW-cL-U0w" secondAttribute="bottom" id="SuA-pe-8vQ"/>
+                            <constraint firstItem="Wlw-79-7C9" firstAttribute="bottom" secondItem="Ox9-wM-8hS" secondAttribute="bottom" id="XpV-al-1jh"/>
+                            <constraint firstItem="fbW-cL-U0w" firstAttribute="top" secondItem="Wlw-79-7C9" secondAttribute="top" id="kM2-Ec-E6f"/>
+                            <constraint firstItem="fbW-cL-U0w" firstAttribute="leading" secondItem="Wlw-79-7C9" secondAttribute="leading" id="px8-yO-HDi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Time" id="J1U-C9-KY8"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ox9-wM-8hS" id="pNy-v8-cbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ff4-ON-Vat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="-498"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fYV-7f-wRB">
+            <objects>
+                <tabBarController id="V6u-F0-bsv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="43W-bn-F33">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="crr-6P-sDJ" kind="relationship" relationship="viewControllers" id="Oav-YW-HEf"/>
+                        <segue destination="cqh-KR-fwu" kind="relationship" relationship="viewControllers" id="3cN-Cm-9ah"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gH-mq-64J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298" y="-194"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
